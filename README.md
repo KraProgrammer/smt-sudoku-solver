@@ -31,3 +31,22 @@ python -m venv <venv_name>
 .\<venv_name>\Scripts\activate
 python -m pip install -r requirements.txt
 ```
+
+## Comparing backtracking with SMT solving
+
+Fundamental performance measurement resulted in:
+
+### Easy sudoku
+
+- BT:  Duration: ~11 ms
+- SMT: Duration: ~40 ms
+
+### Moderate sudoku
+
+- BT:  Duration: ~150 ms
+- SMT: Duration: ~230 ms
+
+### Hard sudoku
+
+- BT:  Duration: ~4000 ms
+- SMT: Duration: ~300 ms
