@@ -1,6 +1,7 @@
 import argparse
-
 from enum import Enum
+
+from model.Sudoku import Sudoku
 
 
 class AlgoType(Enum):
@@ -21,7 +22,10 @@ def main():
     if args.type == AlgoType.BACKTRACKING:
         print('backtracking')
     else:
-        print('smt')
+        from smt.smt import SmtSolver
+        solution, runtime = SmtSolver.solve(Sudoku.from_string())
+        print(solution)
+        print("Duration: " + str(runtime) + " ms")
 
 
 if __name__ == '__main__':
