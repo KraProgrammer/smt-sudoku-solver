@@ -40,6 +40,9 @@ class Sudoku:
     def is_set(self, i, j):
         return self.get_item(i, j) != '.'
 
+    def to_list(self):
+        return self.data.tolist()
+
     @staticmethod
     def from_string(puzzle: string):
         data = [ch for ch in puzzle]
