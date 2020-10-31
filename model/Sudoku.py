@@ -1,3 +1,5 @@
+import string
+
 import numpy as np
 
 
@@ -39,6 +41,6 @@ class Sudoku:
         return self.get_item(i, j) != '.'
 
     @staticmethod
-    def from_string(puzzle='..53.....8......2..7..1.5..4....53...1..7...6..32...8..6.5....9..4....3......97..'):
+    def from_string(puzzle: string):
         data = [ch for ch in puzzle]
         return Sudoku(np.resize(data, (9, 9)))
