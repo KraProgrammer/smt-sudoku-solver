@@ -20,13 +20,12 @@ SMT solvers are applications that calculate the satisfiability of logical formul
 
 ## Requirements 
 
-- Python 3.9
+- Python 3.7
 - requirements.txt
 
 ## Setup Python environment with CLI
 
 ```powershell
-python -m pip install --upgrade pip
 python -m venv <venv_name>
 .\<venv_name>\Scripts\activate
 python -m pip install -r requirements.txt
